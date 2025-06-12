@@ -10,9 +10,9 @@ This site is dedicated to providing up-to-date information and resources for Kni
 
 ## Quick Links
 
-- [2024-25 Roster](/roster/)
-- [Game Schedule](/schedule/)
-- [Team Stats](/stats/)
+- [2024-25 Roster]({{< relref "/roster/" >}})
+- [Game Schedule]({{< relref "/schedule/" >}})
+- [Team Stats]({{< relref "/stats/" >}})
 
 ## Latest News
 
