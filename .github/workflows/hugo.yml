@@ -1,0 +1,41 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write        # OIDC for gh-pages deploy
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 0.128.0
+          extended: true          # ⚠️ necessary for SCSS in most themes
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Upload public/ as artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
