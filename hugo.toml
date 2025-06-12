@@ -2,4 +2,3 @@ baseURL = "https://cdonlan.github.io/NYKnicks/"
 languageCode = "en-us"
 title = "New York Knicks Hub"
 theme = "papermod"
-disableKinds = ["RSS"]
