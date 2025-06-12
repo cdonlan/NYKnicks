@@ -1,17 +1,3 @@
-<table class="table-auto">
-  <thead><tr><th>#</th><th>Player</th><th>Pos</th><th>Ht</th><th>Wt</th></tr></thead>
-  <tbody>
-    {{ range .Site.Data.roster }}
-      <tr>
-        <td>{{ .number }}</td>
-        <td>{{ .name }}</td>
-        <td>{{ .position }}</td>
-        <td>{{ .height }}</td>
-        <td>{{ .weight }}</td>
-      </tr>
-    {{ end }}
-  </tbody>
-</table>
 ---
 title: "Welcome to the New York Knicks Hub"
 ---
