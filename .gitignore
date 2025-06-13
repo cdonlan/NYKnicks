@@ -1,1 +1,12 @@
 public/
+
+# Ignore all Terraform variable files
+*.tfvars
+
+# Optional: ignore backup plan files and state history
+*.tfplan
+*.tfstate*
+.terraform/
+
+# Ignore backend.ps in the infra folder
+infra/backend.ps

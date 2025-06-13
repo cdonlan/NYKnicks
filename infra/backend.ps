@@ -1,0 +1,15 @@
+terraform init `
+  -backend-config="resource_group_name=example-resource-group-tf" `
+  -backend-config="storage_account_name=cmdterraform" `
+  -backend-config="container_name=ghdemo" `
+  -backend-config="key=terraform.tfstate"
+
+  az account set --subscription "05942da6-9151-4bc4-8aca-a385c4cd721c"  
+
+terraform plan -var-file="terraform.tfvars"
+terraform apply -var-file="terraform.tfvars"
+
+#git PAT
+export TF_VAR_github_token="YOUR_GENERATE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D_GITHUB_PAT"
+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
+export TF_VAR_github_token="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"
