@@ -25,8 +25,11 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Initialize theme submodules
+        run: git submodule update --init --recursive
+        
       - name: Build Hugo site
-        run: hugo --minify
+        run: hugo --minify -baseURL "https://salmon-stone-0e35a8e10.6.azurestaticapps.net/""
 
       - name: Build And Deploy
         id: builddeploy

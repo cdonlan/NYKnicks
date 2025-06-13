@@ -27,7 +27,7 @@ jobs:
         run: git submodule update --init --recursive
 
       - name: Build site
-        run: hugo --minify
+        run: hugo --minify --baseURL "https://cdonlan.github.io/NYKnicks/"
 
       - name: Upload public/ as artifact
         uses: actions/upload-pages-artifact@v3
