@@ -1,4 +1,4 @@
 baseURL = "/NYKnicks/"
 languageCode = "en-us"
 title = "New York Knicks Hub"
-theme = "papermod"
+theme = "ananke"
