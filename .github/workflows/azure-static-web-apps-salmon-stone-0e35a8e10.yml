@@ -12,7 +12,7 @@ on:
 jobs:
   build_and_deploy_job:
     runs-on: ubuntu-latest
-    name: Build Jon
+    name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,8 +31,7 @@ jobs:
       - name: Build Hugo site
         run: hugo --minify --baseURL "https://salmon-stone-0e35a8e10.6.azurestaticapps.net/"
 
-      - name: Build And Deploy
-        id: builddeploy
+      - name: deploy_to_azure_static_web_apps
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_SALMON_STONE_0E35A8E10 }}

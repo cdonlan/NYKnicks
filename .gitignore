@@ -10,3 +10,5 @@ public/
 
 # Ignore backend.ps in the infra folder
 infra/backend.ps
+
+venv/
