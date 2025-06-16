@@ -38,3 +38,13 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "public"
+
+  playwright_smoke_test:
+    needs: build_and_deploy_job
+    runs-on: ubuntu-latest
+    name: Playwright Smoke Test
+    steps:
+      - name: Call Playwright Smoke Test Workflow
+        uses: ./.github/workflows/playwright-smoke.yml
+        with:
+          site-url: ${{ vars.AZURE_SITE_URL }}
