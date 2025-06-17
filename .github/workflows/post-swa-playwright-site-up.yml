@@ -13,5 +13,7 @@ jobs:
   run-playwright-site-up:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     uses: ./.github/workflows/playwright-site-up.yml
+    with:
+      url: ${{ secrets.SWA_SITE_URL }}
     secrets:
       SWA_SITE_URL: ${{ secrets.SWA_SITE_URL }}

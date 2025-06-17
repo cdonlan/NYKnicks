@@ -8,6 +8,7 @@ on:
     # Only run if the PR is merged
     paths-ignore:
       - '**.md'
+  workflow_dispatch:
 
 jobs:
   build_and_deploy_job:
