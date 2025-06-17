@@ -1,5 +1,5 @@
 ---
-title: "Welcome to the New York Knicks Hub!!!!!!!"
+title: "Welcome to the New York Knicks Hub!!!!!!!!"
 ---
 
 Welcome to the ultimate fan site for the New York Knicks! Here you'll find the latest news, game schedules, player stats, and more about your favorite NBA team.
