@@ -5,11 +5,10 @@ name: Playwright Site Up Test
 
 on:
   workflow_call:
-    inputs:
+    secrets:
       url:
         description: 'The URL of the site to test'
         required: true
-        type: string
 
 jobs:
   playwright-site-up:
@@ -31,4 +30,4 @@ jobs:
 
       - name: Run Playwright site-up test
         run: |
-          pytest --base-url="${{ inputs.url }}" test/playwright_site_up.py
+          pytest --base-url="${{ secrets.url }}" test/playwright_site_up.py
