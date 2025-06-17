@@ -1,0 +1,17 @@
+# GitHub Actions workflow to run Playwright site-up test after Azure Static Web App deployment
+# Save as .github/workflows/post-swa-playwright-site-up.yml
+
+name: Post SWA Playwright Site Up Test
+
+on:
+  workflow_run:
+    workflows: ["Azure Static Web Apps CI/CD"]
+    types:
+      - completed
+
+jobs:
+  run-playwright-site-up:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/playwright-site-up.yml
+    with:
+      url: ${{ secrets.SWA_SITE_URL }}
