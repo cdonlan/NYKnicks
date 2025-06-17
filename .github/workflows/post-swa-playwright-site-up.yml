@@ -15,5 +15,4 @@ jobs:
     uses: ./.github/workflows/playwright-site-up.yml
     with:
       url: ${{ secrets.SWA_SITE_URL }}
-    secrets:
-      SWA_SITE_URL: ${{ secrets.SWA_SITE_URL }}
+    secrets: inherit
