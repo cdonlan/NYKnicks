@@ -30,4 +30,4 @@ jobs:
 
       - name: Run Playwright site-up test
         run: |
-          pytest --base-url="${{ secrets.url }}" test/playwright_site_up.py
+          python test/playwright_site_up.py "${{ secrets.url }}"
